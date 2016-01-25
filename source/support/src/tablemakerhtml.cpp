@@ -176,6 +176,9 @@ QString TableMakerHTML::getTXT()
 QString TableMakerHTML::makeTableTXT(Result_t data)
 {
     QString output = "";
+    output += "Number_of_entries: "; // Added by JEM
+    output += std::to_string(data.Ex.size()).c_str(); // Added by JEM
+    output += "\n"; // Added by JEM
     output += "Excitation energy (keV):     ";
     output += "Energy dE-detector (keV):     ";
     output += "dEnergy dE-detector (keV):     ";
